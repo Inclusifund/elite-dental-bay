@@ -669,6 +669,143 @@
             .trust-items { flex-direction: column; gap: 20px; }
             .footer-grid { grid-template-columns: 1fr; }
         }
+
+        /* ========== MOTION & ADVANCED HOVER ========== */
+
+        /* Hero badge shimmer sweep */
+        .hero-badge { position: relative; overflow: hidden; }
+        .hero-badge::after {
+            content: '';
+            position: absolute; top: 0; left: -100%;
+            width: 60%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent);
+            animation: badge-shimmer 3.5s ease-in-out infinite 1.2s;
+        }
+        @keyframes badge-shimmer {
+            0% { left: -100%; }
+            100% { left: 220%; }
+        }
+
+        /* Float badges gentle levitate */
+        .hero-float-badge { animation: levitate 3.2s ease-in-out infinite; }
+        .hero-float-badge.bottom-left { animation-delay: 1.6s; }
+        @keyframes levitate {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-7px); }
+        }
+
+        /* Nav link underline slide */
+        .nav-links a { position: relative; }
+        .nav-links a::after {
+            content: '';
+            position: absolute; bottom: -2px; left: 0;
+            width: 0; height: 1.5px;
+            background: var(--primary);
+            transition: width 0.25s ease;
+        }
+        .nav-links a:hover::after { width: 100%; }
+
+        /* Service card icon transform on hover */
+        .service-icon { transition: transform 0.35s ease, background 0.35s ease; }
+        .service-card:hover .service-icon {
+            transform: scale(1.14) rotate(-5deg);
+            background: linear-gradient(135deg, rgba(12,110,140,0.14), rgba(201,168,76,0.1));
+        }
+
+        /* Feature item — left accent bar reveal */
+        .feature-item { position: relative; overflow: hidden; }
+        .feature-item::after {
+            content: '';
+            position: absolute; left: 0; top: 0; bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, var(--primary), var(--accent));
+            transform: scaleY(0);
+            transform-origin: bottom;
+            transition: transform 0.3s ease;
+        }
+        .feature-item:hover::after { transform: scaleY(1); }
+        .feature-icon { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .feature-item:hover .feature-icon {
+            transform: translateY(-4px) scale(1.08);
+            box-shadow: 0 8px 22px rgba(12,110,140,0.28);
+        }
+
+        /* Testimonial card lift */
+        .testimonial-card { transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease; }
+        .testimonial-card:hover {
+            transform: translateY(-7px);
+            box-shadow: var(--shadow-lg);
+            border-color: rgba(12,110,140,0.18);
+        }
+
+        /* BA card image scale */
+        .ba-img { transition: transform 0.45s ease; }
+        .ba-card:hover .ba-img { transform: scale(1.05); }
+
+        /* Counter item glow on hover */
+        .counter-item { transition: all 0.3s ease; }
+        .counter-item:hover {
+            background: rgba(255,255,255,0.14);
+            border-color: rgba(201,168,76,0.45);
+            transform: translateY(-4px);
+        }
+
+        /* Trust icon bounce */
+        .trust-item { transition: transform 0.25s ease; cursor: default; }
+        .trust-item:hover { transform: translateY(-3px); }
+        .trust-item:hover .trust-icon { animation: icon-bounce 0.45s ease; }
+        @keyframes icon-bounce {
+            0%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-7px); }
+            70% { transform: translateY(-2px); }
+        }
+
+        /* Contact item slide-right */
+        .contact-item { transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; }
+        .contact-item:hover {
+            transform: translateX(5px);
+            border-color: rgba(12,110,140,0.22);
+            box-shadow: var(--shadow);
+        }
+
+        /* Form input glow */
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            box-shadow: 0 0 0 3px rgba(12,110,140,0.12);
+        }
+
+        /* Form submit lift */
+        .form-submit { transition: all 0.3s ease; }
+        .form-submit:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 22px rgba(12,110,140,0.28);
+        }
+
+        /* Button ripple container */
+        .btn-primary, .btn-secondary, .nav-cta, .form-submit { position: relative; overflow: hidden; }
+        .btn-ripple {
+            position: absolute; border-radius: 50%;
+            background: rgba(255,255,255,0.28);
+            transform: scale(0);
+            animation: ripple-anim 0.55s linear forwards;
+            pointer-events: none;
+        }
+        @keyframes ripple-anim {
+            to { transform: scale(4); opacity: 0; }
+        }
+
+        /* Scroll-reveal base — applied via JS */
+        .sr-hidden {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.65s ease, transform 0.65s ease;
+        }
+        .sr-hidden.sr-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body>
@@ -1207,6 +1344,83 @@
                     e.preventDefault();
                     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
+            });
+        });
+
+        // ========== SCROLL REVEAL ==========
+        (function() {
+            const selectors = [
+                '.section-header',
+                '.service-card',
+                '.feature-item',
+                '.ba-card',
+                '.testimonial-card',
+                '.trust-item',
+                '.contact-item',
+                '.contact-form',
+                '.why-us-visual',
+                '.counter-item'
+            ];
+            const els = document.querySelectorAll(selectors.join(','));
+            els.forEach(function(el, i) {
+                // stagger within sibling groups
+                const siblings = el.parentElement ? el.parentElement.querySelectorAll(':scope > ' + el.tagName + ', :scope > [class="' + el.className.split(' ')[0] + '"]') : [];
+                let idx = 0;
+                siblings.forEach(function(s, si) { if (s === el) idx = si; });
+                el.classList.add('sr-hidden');
+                el.style.transitionDelay = (idx * 0.08) + 's';
+            });
+            const obs = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('sr-visible');
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            els.forEach(function(el) { obs.observe(el); });
+        })();
+
+        // ========== COUNTER ANIMATION ==========
+        (function() {
+            function animateCount(el) {
+                const raw = el.textContent.trim();
+                const num = parseFloat(raw.replace(/[^0-9.]/g, ''));
+                const suffix = raw.replace(/[0-9.]/g, '');
+                if (isNaN(num)) return;
+                const isFloat = raw.includes('.');
+                const duration = 1600;
+                const startTime = performance.now();
+                function tick(now) {
+                    const p = Math.min((now - startTime) / duration, 1);
+                    const eased = 1 - Math.pow(1 - p, 3);
+                    el.textContent = (isFloat ? (eased * num).toFixed(1) : Math.round(eased * num)) + suffix;
+                    if (p < 1) requestAnimationFrame(tick);
+                }
+                requestAnimationFrame(tick);
+            }
+            const counterEls = document.querySelectorAll('.hero-stat h3, .counter-item h4');
+            const cObs = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        animateCount(entry.target);
+                        cObs.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            counterEls.forEach(function(el) { cObs.observe(el); });
+        })();
+
+        // ========== BUTTON RIPPLE ==========
+        document.querySelectorAll('.btn-primary, .btn-secondary, .nav-cta, .form-submit').forEach(function(btn) {
+            btn.addEventListener('click', function(e) {
+                var r = document.createElement('span');
+                r.classList.add('btn-ripple');
+                var rect = this.getBoundingClientRect();
+                var size = Math.max(rect.width, rect.height);
+                r.style.cssText = 'width:' + size + 'px;height:' + size + 'px;left:' + (e.clientX - rect.left - size/2) + 'px;top:' + (e.clientY - rect.top - size/2) + 'px;';
+                this.appendChild(r);
+                setTimeout(function() { r.remove(); }, 600);
             });
         });
     </script>
