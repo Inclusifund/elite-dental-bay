@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Dental Bay | Premium Dental Care in Sharm El Sheikh</title>
+    <meta name="description" content="Elite Dental Bay - Sharm El Sheikh's premier dental clinic. Cosmetic dentistry, implants, veneers, whitening & emergency care. Book your free consultation today.">
+    <meta name="keywords" content="dentist sharm el sheikh, dental clinic sharm, cosmetic dentistry egypt, dental implants sharm, veneers egypt, teeth whitening sharm el sheikh">
+    <meta property="og:title" content="Elite Dental Bay | Premium Dental Care in Sharm El Sheikh">
+    <meta property="og:description" content="Your smile deserves the best. World-class dental care in the heart of Sharm El Sheikh.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Dentist",
+        "name": "Elite Dental Bay",
+        "description": "Premium dental clinic in Sharm El Sheikh offering cosmetic dentistry, implants, veneers, and emergency dental care.",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Sharm El Sheikh",
+            "addressCountry": "EG"
+        },
+        "telephone": "+201033307779",
+        "priceRange": "$$",
+        "openingHours": "Sa-Th 09:00-21:00",
+        "medicalSpecialty": "Dentistry"
+    }
+    </script>
+
+    <style>
+        :root {
+            --primary: #0C6E8C;
+            --primary-light: #0E8CAE;
+            --primary-dark: #094D63;
+            --accent: #C9A84C;
+            --accent-light: #E0C96E;
+            --accent-dark: #A8892E;
+            --white: #FFFFFF;
+            --off-white: #F8FAFB;
+            --light-gray: #EEF2F5;
+            --mid-gray: #8A99A8;
+            --dark: #1A2332;
+            --darker: #0F1820;
+            --text: #2C3E50;
+            --text-light: #5A6C7D;
+            --green-wa: #25D366;
+            --shadow: 0 4px 24px rgba(12, 110, 140, 0.08);
+            --shadow-lg: 0 12px 48px rgba(12, 110, 140, 0.12);
+            --radius: 16px;
+            --radius-sm: 10px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text);
+            line-height: 1.7;
+            overflow-x: hidden;
+            background: var(--white);
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+        /* ========== NAVBAR ========== */
+        .navbar {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            padding: 16px 0;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(12, 110, 140, 0.06);
+            transition: all 0.3s ease;
+        }
+        .navbar.scrolled {
+            padding: 10px 0;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+        }
+        .nav-inner {
+            display: flex; justify-content: space-between; align-items: center;
+            max-width: 1200px; margin: 0 auto; padding: 0 24px;
+        }
+        .nav-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .nav-logo {
+            width: 44px; height: 44px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 20px; color: white; font-weight: 800;
+        }
+        .nav-brand-text h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem; font-weight: 700; color: var(--dark);
+            line-height: 1.2;
+        }
+        .nav-brand-text span {
+            font-size: 0.65rem; color: var(--mid-gray);
+            letter-spacing: 2px; text-transform: uppercase;
+        }
+        .nav-links { display: flex; gap: 32px; list-style: none; }
+        .nav-links a {
+            text-decoration: none; color: var(--text-light);
+            font-size: 0.9rem; font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--primary); }
+        .nav-cta {
+            background: var(--primary); color: white;
+            padding: 10px 24px; border-radius: 50px;
+            text-decoration: none; font-size: 0.85rem; font-weight: 600;
+            transition: all 0.3s ease;
+            border: none; cursor: pointer;
+        }
+        .nav-cta:hover { background: var(--primary-dark); transform: translateY(-1px); }
+        .nav-hamburger {
+            display: none; background: none; border: none; cursor: pointer;
+            width: 32px; height: 24px; position: relative;
+        }
+        .nav-hamburger span {
+            display: block; width: 100%; height: 2px; background: var(--dark);
+            position: absolute; left: 0; transition: all 0.3s;
+        }
+        .nav-hamburger span:nth-child(1) { top: 0; }
+        .nav-hamburger span:nth-child(2) { top: 50%; transform: translateY(-50%); }
+        .nav-hamburger span:nth-child(3) { bottom: 0; }
+
+        /* ========== HERO ========== */
+        .hero {
+            padding: 160px 0 100px;
+            background: linear-gradient(135deg, var(--darker) 0%, var(--primary-dark) 50%, var(--primary) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background:
+                radial-gradient(ellipse at 20% 50%, rgba(201, 168, 76, 0.1) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(14, 140, 174, 0.2) 0%, transparent 40%),
+                url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .hero-inner {
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 60px; align-items: center;
+            position: relative; z-index: 2;
+        }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(201, 168, 76, 0.15);
+            border: 1px solid rgba(201, 168, 76, 0.3);
+            padding: 6px 16px; border-radius: 50px;
+            font-size: 0.78rem; font-weight: 600; color: var(--accent-light);
+            margin-bottom: 20px;
+        }
+        .hero-badge::before { content: '\u2605'; }
+        .hero h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+            font-weight: 700; color: white;
+            line-height: 1.15; margin-bottom: 20px;
+        }
+        .hero h2 em {
+            font-style: normal;
+            background: linear-gradient(135deg, var(--accent), var(--accent-light));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-sub {
+            font-size: 1.1rem; color: rgba(255,255,255,0.7);
+            line-height: 1.8; margin-bottom: 36px; max-width: 480px;
+        }
+        .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
+        .btn-primary {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--accent); color: var(--dark);
+            padding: 14px 32px; border-radius: 50px;
+            font-size: 0.95rem; font-weight: 700;
+            text-decoration: none; transition: all 0.3s;
+            border: none; cursor: pointer;
+        }
+        .btn-primary:hover { background: var(--accent-light); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(201, 168, 76, 0.3); }
+        .btn-secondary {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(255,255,255,0.1); color: white;
+            padding: 14px 32px; border-radius: 50px;
+            font-size: 0.95rem; font-weight: 600;
+            text-decoration: none; transition: all 0.3s;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .btn-secondary:hover { background: rgba(255,255,255,0.18); }
+        .hero-stats {
+            display: flex; gap: 40px; margin-top: 48px;
+        }
+        .hero-stat h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem; color: var(--accent);
+            font-weight: 700;
+        }
+        .hero-stat p { font-size: 0.8rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 1px; }
+
+        /* Hero Visual */
+        .hero-visual {
+            display: flex; justify-content: center; align-items: center;
+            position: relative;
+        }
+        .hero-card {
+            width: 100%; max-width: 460px;
+            background: rgba(255,255,255,0.07);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 40px;
+            position: relative;
+        }
+        .hero-card-icon {
+            width: 80px; height: 80px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+            border-radius: 20px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 36px; margin-bottom: 24px;
+        }
+        .hero-card h3 {
+            font-family: 'Playfair Display', serif;
+            color: white; font-size: 1.5rem; margin-bottom: 12px;
+        }
+        .hero-card p { color: rgba(255,255,255,0.6); font-size: 0.95rem; margin-bottom: 24px; }
+        .hero-card-features {
+            list-style: none; display: flex; flex-direction: column; gap: 12px;
+        }
+        .hero-card-features li {
+            display: flex; align-items: center; gap: 10px;
+            color: rgba(255,255,255,0.8); font-size: 0.9rem;
+        }
+        .hero-card-features li::before {
+            content: '\2713';
+            display: flex; align-items: center; justify-content: center;
+            width: 22px; height: 22px; min-width: 22px;
+            background: rgba(201, 168, 76, 0.2);
+            color: var(--accent-light);
+            border-radius: 50%; font-size: 0.7rem; font-weight: 700;
+        }
+        .hero-float-badge {
+            position: absolute; background: white;
+            padding: 12px 20px; border-radius: 14px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+            display: flex; align-items: center; gap: 10px;
+        }
+        .hero-float-badge.top-right { top: -20px; right: -30px; }
+        .hero-float-badge.bottom-left { bottom: -20px; left: -30px; }
+        .hero-float-badge .badge-icon {
+            width: 36px; height: 36px; border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 18px;
+        }
+        .hero-float-badge .badge-text { font-size: 0.75rem; color: var(--text-light); }
+        .hero-float-badge .badge-text strong { display: block; color: var(--dark); font-size: 0.85rem; }
+
+        /* ========== TRUST BAR ========== */
+        .trust-bar {
+            padding: 48px 0;
+            background: var(--off-white);
+            border-bottom: 1px solid var(--light-gray);
+        }
+        .trust-items {
+            display: flex; justify-content: center; gap: 48px; flex-wrap: wrap;
+            align-items: center;
+        }
+        .trust-item {
+            display: flex; align-items: center; gap: 12px;
+            font-size: 0.9rem; color: var(--text-light); font-weight: 500;
+        }
+        .trust-icon {
+            width: 44px; height: 44px;
+            background: white; border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 20px;
+            box-shadow: var(--shadow);
+        }
+
+        /* ========== SECTIONS COMMON ========== */
+        .section { padding: 100px 0; }
+        .section-header { text-align: center; margin-bottom: 64px; }
+        .section-label {
+            display: inline-flex; align-items: center; gap: 8px;
+            font-size: 0.78rem; font-weight: 700; color: var(--primary);
+            text-transform: uppercase; letter-spacing: 2px;
+            margin-bottom: 16px;
+        }
+        .section-label::before, .section-label::after {
+            content: ''; width: 20px; height: 1px; background: var(--primary);
+        }
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            color: var(--dark); font-weight: 700;
+            margin-bottom: 16px;
+        }
+        .section-header p {
+            font-size: 1.05rem; color: var(--text-light);
+            max-width: 560px; margin: 0 auto;
+        }
+
+        /* ========== SERVICES ========== */
+        .services { background: var(--off-white); }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+        }
+        .service-card {
+            background: white; border-radius: var(--radius);
+            padding: 36px 28px;
+            transition: all 0.3s ease;
+            border: 1px solid var(--light-gray);
+            position: relative; overflow: hidden;
+        }
+        .service-card::before {
+            content: '';
+            position: absolute; top: 0; left: 0; right: 0;
+            height: 3px; background: linear-gradient(90deg, var(--primary), var(--accent));
+            transform: scaleX(0); transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+        .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+        .service-card:hover::before { transform: scaleX(1); }
+        .service-icon {
+            width: 56px; height: 56px;
+            background: linear-gradient(135deg, rgba(12, 110, 140, 0.08), rgba(12, 110, 140, 0.04));
+            border-radius: 14px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 26px; margin-bottom: 20px;
+        }
+        .service-card h3 { font-size: 1.1rem; font-weight: 700; color: var(--dark); margin-bottom: 10px; }
+        .service-card p { font-size: 0.9rem; color: var(--text-light); line-height: 1.7; }
+
+        /* ========== WHY CHOOSE US ========== */
+        .why-us-grid {
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 60px; align-items: center;
+        }
+        .why-us-visual {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            border-radius: 24px; padding: 48px;
+            position: relative; overflow: hidden;
+            min-height: 420px;
+            display: flex; flex-direction: column; justify-content: center;
+        }
+        .why-us-visual::before {
+            content: '';
+            position: absolute; top: -50%; right: -50%;
+            width: 100%; height: 100%;
+            background: radial-gradient(circle, rgba(201, 168, 76, 0.15), transparent 60%);
+        }
+        .why-us-visual h3 {
+            font-family: 'Playfair Display', serif;
+            color: white; font-size: 2rem; margin-bottom: 16px;
+            position: relative; z-index: 2;
+        }
+        .why-us-visual p {
+            color: rgba(255,255,255,0.7); font-size: 1rem;
+            position: relative; z-index: 2; margin-bottom: 32px;
+        }
+        .why-us-counter {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+            position: relative; z-index: 2;
+        }
+        .counter-item {
+            background: rgba(255,255,255,0.08);
+            border-radius: 16px; padding: 24px; text-align: center;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .counter-item h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem; color: var(--accent);
+        }
+        .counter-item p { font-size: 0.78rem; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
+        .why-us-features { display: flex; flex-direction: column; gap: 24px; }
+        .feature-item {
+            display: flex; gap: 16px;
+            padding: 24px; border-radius: var(--radius);
+            border: 1px solid var(--light-gray);
+            transition: all 0.3s;
+        }
+        .feature-item:hover { background: var(--off-white); border-color: rgba(12, 110, 140, 0.2); }
+        .feature-icon {
+            width: 48px; height: 48px; min-width: 48px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 22px; color: white;
+        }
+        .feature-item h4 { font-size: 1rem; font-weight: 700; color: var(--dark); margin-bottom: 6px; }
+        .feature-item p { font-size: 0.85rem; color: var(--text-light); }
+
+        /* ========== BEFORE/AFTER ========== */
+        .before-after { background: var(--off-white); }
+        .ba-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .ba-card {
+            background: white; border-radius: var(--radius); overflow: hidden;
+            border: 1px solid var(--light-gray);
+            transition: all 0.3s;
+        }
+        .ba-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+        .ba-images { display: grid; grid-template-columns: 1fr 1fr; position: relative; }
+        .ba-img {
+            aspect-ratio: 1;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 2.5rem; position: relative;
+        }
+        .ba-img.before { background: linear-gradient(135deg, #f0e6d6, #e8dcc8); }
+        .ba-img.after { background: linear-gradient(135deg, #d6f0e8, #c8e8dc); }
+        .ba-img-label {
+            position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%);
+            font-size: 0.65rem; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 1px; color: var(--text-light);
+            background: white; padding: 2px 10px; border-radius: 50px;
+        }
+        .ba-arrow {
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            width: 32px; height: 32px; background: var(--primary);
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            color: white; font-size: 14px; z-index: 5;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        .ba-info { padding: 20px; }
+        .ba-info h4 { font-size: 0.95rem; font-weight: 700; color: var(--dark); margin-bottom: 4px; }
+        .ba-info p { font-size: 0.82rem; color: var(--text-light); }
+
+        /* ========== TESTIMONIALS ========== */
+        .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .testimonial-card {
+            background: white; border-radius: var(--radius);
+            padding: 32px; border: 1px solid var(--light-gray);
+            position: relative;
+        }
+        .testimonial-card::before {
+            content: '\201C';
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem; color: rgba(12, 110, 140, 0.08);
+            position: absolute; top: 12px; left: 24px; line-height: 1;
+        }
+        .testimonial-stars { color: var(--accent); font-size: 0.85rem; margin-bottom: 16px; letter-spacing: 2px; }
+        .testimonial-card blockquote {
+            font-size: 0.92rem; color: var(--text);
+            line-height: 1.8; margin-bottom: 20px;
+            font-style: italic;
+        }
+        .testimonial-author { display: flex; align-items: center; gap: 12px; }
+        .testimonial-avatar {
+            width: 42px; height: 42px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            color: white; font-weight: 700; font-size: 0.85rem;
+        }
+        .testimonial-author .name { font-weight: 600; font-size: 0.9rem; color: var(--dark); }
+        .testimonial-author .role { font-size: 0.78rem; color: var(--mid-gray); }
+
+        /* ========== CTA BANNER ========== */
+        .cta-banner {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--darker) 0%, var(--primary-dark) 100%);
+            text-align: center;
+            position: relative; overflow: hidden;
+        }
+        .cta-banner::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: radial-gradient(circle at center, rgba(201, 168, 76, 0.08), transparent 60%);
+        }
+        .cta-banner h2 {
+            font-family: 'Playfair Display', serif;
+            color: white; font-size: clamp(1.8rem, 3vw, 2.5rem);
+            margin-bottom: 16px; position: relative;
+        }
+        .cta-banner p {
+            color: rgba(255,255,255,0.7); font-size: 1.05rem;
+            margin-bottom: 36px; position: relative;
+        }
+        .cta-banner .hero-btns { justify-content: center; position: relative; }
+
+        /* ========== CONTACT ========== */
+        .contact { background: var(--off-white); }
+        .contact-grid {
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 48px;
+        }
+        .contact-info { display: flex; flex-direction: column; gap: 24px; }
+        .contact-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem; color: var(--dark); margin-bottom: 8px;
+        }
+        .contact-info > p { color: var(--text-light); font-size: 0.95rem; }
+        .contact-item {
+            display: flex; gap: 16px; align-items: flex-start;
+            padding: 20px; background: white; border-radius: var(--radius-sm);
+            border: 1px solid var(--light-gray);
+        }
+        .contact-item-icon {
+            width: 44px; height: 44px; min-width: 44px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 18px; color: white;
+        }
+        .contact-item h4 { font-size: 0.85rem; font-weight: 700; color: var(--dark); margin-bottom: 4px; }
+        .contact-item p { font-size: 0.88rem; color: var(--text-light); }
+        .contact-item a { color: var(--primary); text-decoration: none; font-weight: 600; }
+        .contact-item a:hover { text-decoration: underline; }
+
+        .contact-form {
+            background: white; border-radius: var(--radius);
+            padding: 40px; border: 1px solid var(--light-gray);
+        }
+        .contact-form h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem; color: var(--dark); margin-bottom: 24px;
+        }
+        .form-group { margin-bottom: 16px; }
+        .form-group label {
+            display: block; font-size: 0.82rem; font-weight: 600;
+            color: var(--text); margin-bottom: 6px;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%; padding: 12px 16px;
+            border: 1px solid var(--light-gray);
+            border-radius: var(--radius-sm);
+            font-family: inherit; font-size: 0.9rem;
+            color: var(--text); background: var(--off-white);
+            transition: border-color 0.2s;
+        }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: none; border-color: var(--primary);
+            background: white;
+        }
+        .form-group textarea { resize: vertical; min-height: 100px; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .form-submit {
+            width: 100%; padding: 14px;
+            background: var(--primary); color: white;
+            border: none; border-radius: 50px;
+            font-size: 0.95rem; font-weight: 700;
+            cursor: pointer; transition: all 0.3s;
+        }
+        .form-submit:hover { background: var(--primary-dark); }
+
+        /* ========== MAP ========== */
+        .map-section { padding: 0; }
+        .map-section iframe {
+            width: 100%; height: 400px; border: 0;
+            filter: grayscale(20%);
+        }
+
+        /* ========== FOOTER ========== */
+        .footer {
+            background: var(--darker); color: rgba(255,255,255,0.5);
+            padding: 64px 0 32px;
+        }
+        .footer-grid {
+            display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 48px; margin-bottom: 48px;
+        }
+        .footer-brand h3 {
+            font-family: 'Playfair Display', serif;
+            color: white; font-size: 1.3rem; margin-bottom: 12px;
+        }
+        .footer-brand p { font-size: 0.85rem; line-height: 1.8; margin-bottom: 16px; }
+        .footer-social { display: flex; gap: 12px; }
+        .footer-social a {
+            width: 38px; height: 38px;
+            background: rgba(255,255,255,0.06);
+            border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
+            color: rgba(255,255,255,0.5);
+            text-decoration: none; font-size: 0.85rem;
+            transition: all 0.3s;
+        }
+        .footer-social a:hover { background: var(--primary); color: white; }
+        .footer-col h4 {
+            color: white; font-size: 0.85rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 10px; }
+        .footer-col a {
+            color: rgba(255,255,255,0.5); text-decoration: none;
+            font-size: 0.85rem; transition: color 0.2s;
+        }
+        .footer-col a:hover { color: var(--accent); }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.06);
+            padding-top: 32px;
+            display: flex; justify-content: space-between; align-items: center;
+            font-size: 0.78rem;
+        }
+        .footer-bottom a { color: var(--accent); text-decoration: none; }
+
+        /* ========== WHATSAPP FLOAT ========== */
+        .wa-float {
+            position: fixed; bottom: 28px; right: 28px; z-index: 999;
+            display: flex; align-items: center; gap: 12px;
+            background: var(--green-wa); color: white;
+            padding: 14px 28px; border-radius: 50px;
+            text-decoration: none; font-weight: 700; font-size: 0.9rem;
+            box-shadow: 0 6px 24px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s;
+            animation: pulse-wa 2s infinite;
+        }
+        .wa-float:hover { transform: translateY(-3px) scale(1.03); box-shadow: 0 10px 36px rgba(37, 211, 102, 0.5); }
+        .wa-float svg { width: 22px; height: 22px; fill: white; }
+        @keyframes pulse-wa {
+            0%, 100% { box-shadow: 0 6px 24px rgba(37, 211, 102, 0.4); }
+            50% { box-shadow: 0 6px 36px rgba(37, 211, 102, 0.6); }
+        }
+
+        /* ========== MOBILE NAV ========== */
+        .mobile-menu {
+            display: none;
+            position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(255,255,255,0.98);
+            backdrop-filter: blur(20px);
+            z-index: 999;
+            flex-direction: column; align-items: center; justify-content: center;
+            gap: 24px;
+        }
+        .mobile-menu.active { display: flex; }
+        .mobile-menu a {
+            font-size: 1.3rem; color: var(--dark); text-decoration: none;
+            font-weight: 600;
+        }
+        .mobile-close {
+            position: absolute; top: 20px; right: 24px;
+            background: none; border: none; font-size: 2rem;
+            color: var(--dark); cursor: pointer;
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 1024px) {
+            .hero-inner { grid-template-columns: 1fr; text-align: center; }
+            .hero-sub { margin: 0 auto 36px; }
+            .hero-btns { justify-content: center; }
+            .hero-stats { justify-content: center; }
+            .hero-visual { display: none; }
+            .why-us-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
+            .nav-links, .nav-cta { display: none; }
+            .nav-hamburger { display: block; }
+            .hero { padding: 140px 0 80px; }
+            .hero-stats { flex-direction: column; gap: 16px; align-items: center; }
+            .services-grid { grid-template-columns: 1fr; }
+            .ba-grid { grid-template-columns: 1fr; }
+            .testimonials-grid { grid-template-columns: 1fr; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+            .section { padding: 72px 0; }
+            .form-row { grid-template-columns: 1fr; }
+            .wa-float { bottom: 20px; right: 16px; padding: 12px 20px; font-size: 0.82rem; }
+        }
+        @media (max-width: 480px) {
+            .trust-items { flex-direction: column; gap: 20px; }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="#" class="nav-brand">
+                <div class="nav-logo">E</div>
+                <div class="nav-brand-text">
+                    <h1>Elite Dental Bay</h1>
+                    <span>Sharm El Sheikh</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#why-us">Why Us</a></li>
+                <li><a href="#results">Results</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="https://wa.me/201033307779?text=Hi%20Elite%20Dental%20Bay%2C%20I%27d%20like%20to%20book%20a%20consultation" class="nav-cta">Book Consultation</a>
+            <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-close" onclick="toggleMenu()">&times;</button>
+        <a href="#services" onclick="toggleMenu()">Services</a>
+        <a href="#why-us" onclick="toggleMenu()">Why Us</a>
+        <a href="#results" onclick="toggleMenu()">Results</a>
+        <a href="#reviews" onclick="toggleMenu()">Reviews</a>
+        <a href="#contact" onclick="toggleMenu()">Contact</a>
+        <a href="https://wa.me/201033307779?text=Hi%20Elite%20Dental%20Bay%2C%20I%27d%20like%20to%20book%20a%20consultation" class="btn-primary" style="margin-top: 16px;">Book on WhatsApp</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-inner">
+                <div>
+                    <div class="hero-badge">Premium Dental Care in Sharm El Sheikh</div>
+                    <h2>Your Smile Deserves <em>Elite</em> Care</h2>
+                    <p class="hero-sub">World-class cosmetic dentistry, implants & smile makeovers in the heart of Sharm El Sheikh. Experience the confidence of a perfect smile.</p>
+                    <div class="hero-btns">
+                        <a href="https://wa.me/201033307779?text=Hi%20Elite%20Dental%20Bay%2C%20I%27d%20like%20to%20book%20a%20free%20consultation" class="btn-primary">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            Book Free Consultation
+                        </a>
+                        <a href="#services" class="btn-secondary">Our Services &darr;</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <h3>5000+</h3>
+                            <p>Happy Patients</p>
+                        </div>
+                        <div class="hero-stat">
+                            <h3>15+</h3>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="hero-stat">
+                            <h3>4.9</h3>
+                            <p>Google Rating</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-card">
+                        <div class="hero-float-badge top-right">
+                            <div class="badge-icon" style="background: rgba(37, 211, 102, 0.1); color: #25D366;">&#10003;</div>
+                            <div class="badge-text"><strong>Open Today</strong>9:00 AM - 9:00 PM</div>
+                        </div>
+                        <div class="hero-card-icon">&#9786;</div>
+                        <h3>Free Consultation</h3>
+                        <p>Get a comprehensive dental assessment and personalized treatment plan at no cost.</p>
+                        <ul class="hero-card-features">
+                            <li>Full dental examination</li>
+                            <li>Digital X-ray analysis</li>
+                            <li>Custom treatment plan</li>
+                            <li>Transparent pricing</li>
+                        </ul>
+                        <div class="hero-float-badge bottom-left">
+                            <div class="badge-icon" style="background: rgba(201, 168, 76, 0.1); color: var(--accent);">&#9733;</div>
+                            <div class="badge-text"><strong>Trusted by 5000+</strong>Patients in Sharm</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST BAR -->
+    <div class="trust-bar">
+        <div class="container">
+            <div class="trust-items">
+                <div class="trust-item">
+                    <div class="trust-icon">&#127891;</div>
+                    <span>Internationally Certified</span>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">&#128300;</div>
+                    <span>Latest Digital Technology</span>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">&#128176;</div>
+                    <span>Transparent Pricing</span>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">&#9203;</div>
+                    <span>Same-Day Emergency Care</span>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">&#128172;</div>
+                    <span>English & Arabic Speaking</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SERVICES -->
+    <section class="section services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">What We Offer</div>
+                <h2>Comprehensive Dental Services</h2>
+                <p>From routine checkups to complete smile transformations, we offer a full range of dental services using the latest technology.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">&#10024;</div>
+                    <h3>Cosmetic Dentistry</h3>
+                    <p>Smile makeovers, teeth whitening, and aesthetic treatments to give you the confident smile you deserve.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">&#129463;</div>
+                    <h3>Dental Implants</h3>
+                    <p>Permanent tooth replacement with premium implant systems. Natural look and feel that lasts a lifetime.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">&#128142;</div>
+                    <h3>Porcelain Veneers</h3>
+                    <p>Transform your smile with ultra-thin, custom-crafted veneers for a flawless, natural appearance.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">&#127775;</div>
+                    <h3>Teeth Whitening</h3>
+                    <p>Professional in-office and take-home whitening treatments for a dramatically brighter smile.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">&#128736;</div>
+                    <h3>Orthodontics</h3>
+                    <p>Clear aligners and modern braces solutions for perfectly straight teeth at any age.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">&#128153;</div>
+                    <h3>General Dentistry</h3>
+                    <p>Comprehensive exams, cleanings, fillings, root canals, and preventive care for your whole family.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="section" id="why-us">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Why Choose Us</div>
+                <h2>The Elite Dental Bay Difference</h2>
+                <p>We combine world-class expertise with cutting-edge technology to deliver exceptional results.</p>
+            </div>
+            <div class="why-us-grid">
+                <div class="why-us-visual">
+                    <h3>Excellence in Every Smile</h3>
+                    <p>Our state-of-the-art clinic in Sharm El Sheikh is equipped with the latest dental technology for precise, comfortable treatments.</p>
+                    <div class="why-us-counter">
+                        <div class="counter-item">
+                            <h4>5000+</h4>
+                            <p>Patients Served</p>
+                        </div>
+                        <div class="counter-item">
+                            <h4>98%</h4>
+                            <p>Satisfaction Rate</p>
+                        </div>
+                        <div class="counter-item">
+                            <h4>15+</h4>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="counter-item">
+                            <h4>3000+</h4>
+                            <p>Smile Makeovers</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="why-us-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">&#128300;</div>
+                        <div>
+                            <h4>Advanced Digital Technology</h4>
+                            <p>3D scanning, digital X-rays, and CAD/CAM for precise diagnoses and same-day restorations.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">&#127891;</div>
+                        <div>
+                            <h4>Internationally Trained Team</h4>
+                            <p>Our doctors hold certifications from leading dental institutions worldwide.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">&#128155;</div>
+                        <div>
+                            <h4>Comfort-First Approach</h4>
+                            <p>Pain-free treatments with sedation options. Relax in our modern, spa-like environment.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">&#128176;</div>
+                        <div>
+                            <h4>Flexible Payment Plans</h4>
+                            <p>Transparent pricing with no hidden fees. Installment options available for all treatments.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">&#9203;</div>
+                        <div>
+                            <h4>Emergency Dental Care</h4>
+                            <p>Same-day emergency appointments available. We're here when you need us most.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BEFORE / AFTER -->
+    <section class="section before-after" id="results">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Real Results</div>
+                <h2>Smile Transformations</h2>
+                <p>See the life-changing results our patients have achieved with our expert treatments.</p>
+            </div>
+            <div class="ba-grid">
+                <div class="ba-card">
+                    <div class="ba-images">
+                        <div class="ba-img before">
+                            &#128566;
+                            <span class="ba-img-label">Before</span>
+                        </div>
+                        <div class="ba-img after">
+                            &#128513;
+                            <span class="ba-img-label">After</span>
+                        </div>
+                        <div class="ba-arrow">&rarr;</div>
+                    </div>
+                    <div class="ba-info">
+                        <h4>Complete Smile Makeover</h4>
+                        <p>Veneers + whitening - 2 week transformation</p>
+                    </div>
+                </div>
+                <div class="ba-card">
+                    <div class="ba-images">
+                        <div class="ba-img before">
+                            &#128542;
+                            <span class="ba-img-label">Before</span>
+                        </div>
+                        <div class="ba-img after">
+                            &#128516;
+                            <span class="ba-img-label">After</span>
+                        </div>
+                        <div class="ba-arrow">&rarr;</div>
+                    </div>
+                    <div class="ba-info">
+                        <h4>Dental Implant Restoration</h4>
+                        <p>Full arch implants - natural look & function</p>
+                    </div>
+                </div>
+                <div class="ba-card">
+                    <div class="ba-images">
+                        <div class="ba-img before">
+                            &#128528;
+                            <span class="ba-img-label">Before</span>
+                        </div>
+                        <div class="ba-img after">
+                            &#128515;
+                            <span class="ba-img-label">After</span>
+                        </div>
+                        <div class="ba-arrow">&rarr;</div>
+                    </div>
+                    <div class="ba-info">
+                        <h4>Teeth Whitening</h4>
+                        <p>8 shades brighter in one session</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section" id="reviews">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Patient Reviews</div>
+                <h2>What Our Patients Say</h2>
+                <p>Don't just take our word for it - hear from the thousands of patients who trust us with their smiles.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <blockquote>"Absolutely amazing experience. The team made me feel comfortable from the moment I walked in. My veneers look incredibly natural - I can't stop smiling!"</blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">SA</div>
+                        <div>
+                            <div class="name">Sarah A.</div>
+                            <div class="role">Cosmetic Veneers Patient</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <blockquote>"I was terrified of dentists until I came here. The pain-free approach is real - I didn't feel a thing during my implant procedure. Highly recommend!"</blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">MK</div>
+                        <div>
+                            <div class="name">Mohamed K.</div>
+                            <div class="role">Dental Implant Patient</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <blockquote>"Best dental clinic in Sharm, period. Professional staff, immaculate clinic, and the results speak for themselves. My whole family comes here now."</blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">LE</div>
+                        <div>
+                            <div class="name">Laura E.</div>
+                            <div class="role">Family Dentistry Patient</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="cta-banner">
+        <div class="container">
+            <h2>Ready to Transform Your Smile?</h2>
+            <p>Book your free consultation today and take the first step towards the smile you've always wanted.</p>
+            <div class="hero-btns">
+                <a href="https://wa.me/201033307779?text=Hi%20Elite%20Dental%20Bay%2C%20I%27d%20like%20to%20book%20a%20free%20consultation" class="btn-primary">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Book Free Consultation
+                </a>
+                <a href="tel:+201033307779" class="btn-secondary">
+                    &#128222; Call Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div>
+                        <h3>Visit Our Clinic</h3>
+                        <p>We're conveniently located in Sharm El Sheikh. Walk-ins welcome, appointments preferred.</p>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">&#128205;</div>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Sharm El Sheikh, South Sinai, Egypt</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">&#128222;</div>
+                        <div>
+                            <h4>Phone / WhatsApp</h4>
+                            <p><a href="https://wa.me/201033307779">+20 103 330 7779</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">&#128336;</div>
+                        <div>
+                            <h4>Working Hours</h4>
+                            <p>Saturday - Thursday: 9:00 AM - 9:00 PM<br>Friday: 2:00 PM - 9:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">&#128231;</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p><a href="mailto:info@elitedentalbay.com">info@elitedentalbay.com</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Request an Appointment</h3>
+                    <form id="contactForm" onsubmit="handleSubmit(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" placeholder="Your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+20 xxx xxx xxxx" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Interested In</label>
+                            <select id="service" name="service">
+                                <option value="">Select a service...</option>
+                                <option value="consultation">Free Consultation</option>
+                                <option value="cosmetic">Cosmetic Dentistry</option>
+                                <option value="implants">Dental Implants</option>
+                                <option value="veneers">Porcelain Veneers</option>
+                                <option value="whitening">Teeth Whitening</option>
+                                <option value="orthodontics">Orthodontics</option>
+                                <option value="general">General Dentistry</option>
+                                <option value="emergency">Emergency Care</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message (Optional)</label>
+                            <textarea id="message" name="message" placeholder="Tell us about your dental concerns..."></textarea>
+                        </div>
+                        <button type="submit" class="form-submit">Send Appointment Request</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAP -->
+    <div class="map-section">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55751.09637470728!2d34.30!3d27.91!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14531f1b7b6fdc65%3A0xf47be08626e86c6!2sSharm%20El-Sheikh%2C%20South%20Sinai%20Governorate%2C%20Egypt!5e0!3m2!1sen!2seg!4v1711900000000!5m2!1sen!2seg"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Elite Dental Bay Location"></iframe>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Elite Dental Bay</h3>
+                    <p>Sharm El Sheikh's premier dental clinic, providing world-class dental care with a personal touch. Your smile is our passion.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook">FB</a>
+                        <a href="#" aria-label="Instagram">IG</a>
+                        <a href="#" aria-label="TikTok">TT</a>
+                        <a href="https://wa.me/201033307779" aria-label="WhatsApp">WA</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Cosmetic Dentistry</a></li>
+                        <li><a href="#services">Dental Implants</a></li>
+                        <li><a href="#services">Porcelain Veneers</a></li>
+                        <li><a href="#services">Teeth Whitening</a></li>
+                        <li><a href="#services">Orthodontics</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#why-us">Why Choose Us</a></li>
+                        <li><a href="#results">Before & After</a></li>
+                        <li><a href="#reviews">Patient Reviews</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="tel:+201033307779">+20 103 330 7779</a></li>
+                        <li><a href="mailto:info@elitedentalbay.com">info@elitedentalbay.com</a></li>
+                        <li><a href="#">Sharm El Sheikh</a></li>
+                        <li><a href="#">South Sinai, Egypt</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 Elite Dental Bay. All rights reserved.</span>
+                <span>Crafted by <a href="#">AntiGravity</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOAT -->
+    <a href="https://wa.me/201033307779?text=Hi%20Elite%20Dental%20Bay%2C%20I%27d%20like%20to%20book%20a%20consultation" class="wa-float" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Chat on WhatsApp
+    </a>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 40);
+        });
+
+        // Mobile menu
+        function toggleMenu() {
+            document.getElementById('mobileMenu').classList.toggle('active');
+        }
+
+        // Form submission -> WhatsApp redirect
+        function handleSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const service = document.getElementById('service').value;
+            const message = document.getElementById('message').value;
+
+            let waMsg = `Hi Elite Dental Bay! I'd like to book an appointment.\n\n`;
+            waMsg += `Name: ${name}\n`;
+            waMsg += `Phone: ${phone}\n`;
+            if (service) waMsg += `Service: ${service}\n`;
+            if (message) waMsg += `Message: ${message}\n`;
+
+            window.open(`https://wa.me/201033307779?text=${encodeURIComponent(waMsg)}`, '_blank');
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
